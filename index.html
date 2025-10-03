@@ -1,12 +1,11 @@
 
 <!DOCTYPE html>
-
 <html>
 <head>
-<title>Mobile Inventory Verification</title>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
-<style>
+    <title>Mobile Inventory Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <style>
         body {
             font-family: Arial, sans-serif;
             padding: 10px;
@@ -45,19 +44,23 @@
     </style>
 </head>
 <body>
-<h2>Mobile Inventory Verification</h2>
-<div class="input-group">
-<label for="upc">UPC:</label>
-<input id="upc" name="upc" type="text"/>
-<button onclick="startScan('upc')">Scan UPC</button>
-</div>
-<div class="input-group">
-<label for="location">Location:</label>
-<input id="location" name="location" type="text"/>
-<button onclick="startScan('location')">Scan Location</button>
-</div>
-<div id="reader"></div>
-<script>
+    <h2>Mobile Inventory Verification</h2>
+
+    <div class="input-group">
+        <label for="upc">UPC:</label>
+        <input type="text" id="upc" name="upc">
+        <button onclick="startScan('upc')">Scan UPC</button>
+    </div>
+
+    <div class="input-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        <button onclick="startScan('location')">Scan Location</button>
+    </div>
+
+    <div id="reader"></div>
+
+    <script>
         let html5QrCode;
         let currentField = "";
 
